@@ -1,0 +1,92 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.video-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+div.video-container video {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+div.video-container div.controls {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  background-color: rgba(20, 20, 20, 0.6);
+}
+
+div.controls.hidded {
+  display: none;
+}
+
+div.controls div.time-bar {
+  cursor: pointer;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(35, 35, 35, 0.5);
+  position: relative;
+}
+
+div.time-bar div.time-bar-progress {
+  z-index: 2;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.time-bar div.time-bar-buffer {
+  z-index: 1;
+  height: 5px;
+  background-color: rgba(80, 80, 80, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.buttons button {
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 1.6em;
+  color: white;
+}
+
+div.buttons button.playPause.play::before {
+  content: "\f04b";
+  font-family: "Font Awesome 6 Free";
+}
+
+div.buttons button.playPause.pause::before {
+  content: "\f04c";
+  font-family: "Font Awesome 6 Free";
+}

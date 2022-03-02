@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Buck Bunny</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="./src/video_player.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/6b793f6205.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div data-video-container class="video-container">
+    <video data-video-player id="videoPlayer" autoplay="true"> 
+      <source src="/video" type="video/mp4"/>
+    </video>
+    <div data-video-controls class="controls">
+      <div data-video-time-bar class="time-bar">
+        <div data-video-time-bar-buffer class="time-bar-buffer"></div>
+        <div data-video-time-bar-progress class="time-bar-progress"></div>
+      </div>
+      <div class="buttons">
+        <button data-video-play-pause-button class="playPause fa-solid fa-play"></button>
+        <button class="volume-btn fa-solid fa-volume-high"></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
